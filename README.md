@@ -132,57 +132,62 @@ finally.
   - **throw**: Used to explicitly throw an exception.
   - **throws**: Declares exceptions a method might throw.
 
-19.	What are checked and unchecked exceptions?
-•	Checked: Checked at compile-time (e.g., IOException).
-•	Unchecked: Occur at runtime (e.g., NullPointerException).
+###	What are checked and unchecked exceptions?
+  - **Checked**: Checked at compile-time (e.g., IOException).
+  - **Unchecked**: Occur at runtime (e.g., NullPointerException).
 
-20.	Explain the concept of synchronization in Java.
+###	Explain the concept of synchronization in Java.
 Synchronization prevents thread interference by allowing only one thread to access a critical section at a time, using the synchronized keyword.
 
-21.	What is the Java Collections Framework?
+###	What is the Java Collections Framework?
 A unified architecture for storing and manipulating groups of objects, including interfaces like List, Set, and Map.
 
-22.	Differentiate between ArrayList and LinkedList.
-•	ArrayList: Backed by a dynamic array, faster for indexing.
-•	LinkedList: Backed by a doubly-linked list, better for insertions/deletions.
+###	Differentiate between ArrayList and LinkedList.
+  - **ArrayList**: Backed by a dynamic array, faster for indexing.
+  - **LinkedList**: Backed by a doubly-linked list, better for insertions/deletions.
 
-23.	What is a HashMap? How does it work internally?
+###	What is a HashMap? How does it work internally?
 HashMap stores key-value pairs using a hash table. Keys are hashed to determine the index, and collisions are handled using linked lists or trees.
 
-24.	Explain the significance of the equals() and hashCode() methods.
-•	equals(): Checks logical equality.
-•	hashCode(): Provides a unique hash for an object, used in hash-based collections like HashMap.
+###	Explain the significance of the equals() and hashCode() methods.
+  - **equals()**: Checks logical equality.
+  - **hashCode()**: Provides a unique hash for an object, used in hash-based collections like HashMap.
 
-25.	What is the difference between Comparable and Comparator?
-•	Comparable: Used to define natural ordering.
-•	Comparator: Defines custom ordering.
+###	What is the difference between Comparable and Comparator?
+  - **Comparable**: Used to define natural ordering.
+  - **Comparator**: Defines custom ordering.
 
-26.	Describe the Java Memory Model (JMM).
+###	Describe the Java Memory Model (JMM).
 Defines how threads interact through memory, ensuring visibility and ordering of variable accesses.
  
-27.	What is garbage collection in Java? How does it work?
+###	What is garbage collection in Java? How does it work?
 Garbage collection automatically deallocates memory for objects no longer in use, reclaiming memory in the heap.
 
-28.	Explain the concept of Java annotations.
+###	Explain the concept of Java annotations.
 Annotations provide metadata about code, such as @Override, @Deprecated, and custom annotations.
 
-29.	What are lambda expressions? Provide a use case.
-Lambda expressions provide a concise way to implement functional interfaces. Example:
-java CopyEdit
-List<Integer> list = Arrays.asList(1, 2, 3); list.forEach(n -> System.out.println(n));
+###	What are lambda expressions? Provide a use case.
+Lambda expressions provide a concise way to implement functional interfaces. 
+Example:
+```java
+List<Integer> list = Arrays.asList(1, 2, 3);
+list.forEach(n -> System.out.println(n));
+```
 
-30.	Discuss the Stream API in Java.
+###	Discuss the Stream API in Java.
 The Stream API processes collections of objects in a functional style, supporting operations like filter, map, and reduce.
 
-31.	What is the purpose of the Optional class?
+###	What is the purpose of the Optional class?
 Optional prevents NullPointerException by representing optional values.
 
-32.	Explain the try-with-resources statement.
-Manages resources (like files) automatically, ensuring they are closed after use. Example:
-java CopyEdit
+###	Explain the try-with-resources statement.
+Manages resources (like files) automatically, ensuring they are closed after use. 
+Example:
+```java 
 try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
 // Read file
 }
+```
 
 33.	What is the difference between final, finally, and finalize()?
 •	final: Prevents modification of variables, methods, or classes.
