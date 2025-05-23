@@ -70,13 +70,13 @@ void display() { }
 }
 ```
 
-9.	What is inheritance in Java? Discuss its types.
+###	What is inheritance in Java? Discuss its types.
 Inheritance allows a class to acquire the properties and methods of another class using the
 extends keyword. Types:
-1.	Single: One class inherits from another.
-2.	Multilevel: A chain of inheritance.
-3.	Hierarchical: Multiple classes inherit from one superclass.
-4.	Multiple (via interfaces): A class implements multiple interfaces.
+  -	Single: One class inherits from another.
+  -	Multilevel: A chain of inheritance.
+  -	Hierarchical: Multiple classes inherit from one superclass.
+  -	Multiple (via interfaces): A class implements multiple interfaces.
 
 
 10.	Define polymorphism and its types in Java.
