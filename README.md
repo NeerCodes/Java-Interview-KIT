@@ -79,14 +79,14 @@ extends keyword. Types:
   -	Multiple (via interfaces): A class implements multiple interfaces.
 
 
-10.	Define polymorphism and its types in Java.
+###	Define polymorphism and its types in Java.
 Polymorphism allows methods to perform different tasks based on the object. Types:
-1.	Compile-time (Method Overloading).
-2.	Runtime (Method Overriding).
+  - Compile-time (Method Overloading).
+  - Runtime (Method Overriding).
 
-11.	What is an interface in Java, and how does it differ from an abstract class?
-•	Interface: A collection of abstract methods and static constants.
-•	Can have default and static methods (since Java 8).
+### What is an interface in Java, and how does it differ from an abstract class?
+  -	**Interface**: A collection of abstract methods and static constants.
+  - Can have default and static methods (since Java 8).
  
 •	A class can implement multiple interfaces.
 Difference:
