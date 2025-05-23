@@ -87,11 +87,10 @@ Polymorphism allows methods to perform different tasks based on the object. Type
 ### What is an interface in Java, and how does it differ from an abstract class?
   -	**Interface**: A collection of abstract methods and static constants.
   - Can have default and static methods (since Java 8).
- 
-•	A class can implement multiple interfaces.
-Difference:
-•	Abstract class can have both abstract and concrete methods; an interface has abstract methods by default (Java 7 and below).
-•	A class extends one abstract class but can implement multiple interfaces.
+  - A class can implement multiple interfaces.
+  - **Difference**:
+    - Abstract class can have both abstract and concrete methods; an interface has abstract methods by default (Java 7 and below).
+    - A class extends one abstract class but can implement multiple interfaces.
 
 12.	Describe the access modifiers in Java.
 •	Public: Accessible everywhere.
