@@ -12,24 +12,24 @@ Java is a high-level, object-oriented programming language developed by Sun Micr
 - **Multithreaded**: Supports concurrent execution of multiple threads.
 - **Secure**: No explicit pointers and runs in a sandboxed JVM environment.
 
-## Main Principles of Object-Oriented Programming (OOP)
+### Main Principles of Object-Oriented Programming (OOP)
 
 - **Encapsulation**: Wrapping data and methods into a single unit (class) to restrict direct access.
 - **Abstraction**: Hiding implementation details and exposing only necessary functionality.
 - **Inheritance**: Allowing a class to inherit properties and methods from another class.
 - **Polymorphism**: Enabling a single interface to represent different forms through method overloading and overriding.
 
-## Difference Between JDK, JRE, and JVM
+### Difference Between JDK, JRE, and JVM
 
 - **JDK (Java Development Kit)**: A development environment with tools like the compiler (`javac`) and debugger for building Java applications.
 - **JRE (Java Runtime Environment)**: A runtime environment that includes JVM and libraries to run Java applications.
 - **JVM (Java Virtual Machine)**: An abstract machine that interprets and executes Java bytecode on a specific platform.
 
-## Platform Independence in Java
+### Platform Independence in Java
 
 Java achieves platform independence by compiling source code into platform-independent **bytecode**. The JVM, which is platform-specific, interprets this bytecode to run the program on any operating system with a compatible JVM.
 
-## Significance of the `main` Method in Java
+### Significance of the `main` Method in Java
 
 The `main` method serves as the entry point for a Java application. Its signature is:
 
@@ -46,25 +46,29 @@ public static void main(String[] args)
 Java uses automatic garbage collection to manage memory. Objects are allocated in the heap memory, and when they are no longer referenced, the garbage collector deallocates them.
  
 ###	What are constructors in Java? How are they different from methods?
-•	Constructors: Special methods to initialize objects.
-•	Name matches the class.
-•	No return type.
-•	Difference from methods: Methods perform actions; constructors initialize objects.
-8.	Explain method overloading and method overriding with examples.
-•	Overloading: Same method name, different parameters (compile-time polymorphism).
-java CopyEdit
+-	**Constructors**: Special methods to initialize objects.
+  -	Name matches the class.
+  -	No return type.
+-	**Difference from methods**: Methods perform actions; constructors initialize objects.
+  
+###	Explain method overloading and method overriding with examples.
+-	**Overloading**: Same method name, different parameters (compile-time polymorphism).
+  
+```java
 class Example {
 void display(int a) { } void display(String b) { }
 }
+```
 
-•	Overriding: Subclass provides a new implementation for a method in the superclass (runtime polymorphism).
-java CopyEdit
+-	**Overriding**: Subclass provides a new implementation for a method in the superclass (runtime polymorphism).
+```java 
 class Parent {
 void display() { }
 }
 class Child extends Parent { @Override
 void display() { }
 }
+```
 
 9.	What is inheritance in Java? Discuss its types.
 Inheritance allows a class to acquire the properties and methods of another class using the
