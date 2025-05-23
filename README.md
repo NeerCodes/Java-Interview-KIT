@@ -1,8 +1,45 @@
 # Java-Interview-KIT
 A comprehensive Java quick revision doc.
 
+# Java Programming Overview
 
-ANSWERS
+## What is Java?
+
+Java is a high-level, object-oriented programming language developed by Sun Microsystems (now Oracle) in 1995. It is widely used for its portability, robustness, and versatility across various platforms.
+
+### Key Features of Java
+
+- **Platform Independent**: Write Once, Run Anywhere (WORA) through bytecode executed by the Java Virtual Machine (JVM).
+- **Object-Oriented**: Follows OOP principles like encapsulation, inheritance, polymorphism, and abstraction.
+- **Robust**: Strong memory management, exception handling, and type checking.
+- **Multithreaded**: Supports concurrent execution of multiple threads.
+- **Secure**: No explicit pointers and runs in a sandboxed JVM environment.
+
+## Main Principles of Object-Oriented Programming (OOP)
+
+- **Encapsulation**: Wrapping data and methods into a single unit (class) to restrict direct access.
+- **Abstraction**: Hiding implementation details and exposing only necessary functionality.
+- **Inheritance**: Allowing a class to inherit properties and methods from another class.
+- **Polymorphism**: Enabling a single interface to represent different forms through method overloading and overriding.
+
+## Difference Between JDK, JRE, and JVM
+
+- **JDK (Java Development Kit)**: A development environment with tools like the compiler (`javac`) and debugger for building Java applications.
+- **JRE (Java Runtime Environment)**: A runtime environment that includes JVM and libraries to run Java applications.
+- **JVM (Java Virtual Machine)**: An abstract machine that interprets and executes Java bytecode on a specific platform.
+
+## Platform Independence in Java
+
+Java achieves platform independence by compiling source code into platform-independent **bytecode**. The JVM, which is platform-specific, interprets this bytecode to run the program on any operating system with a compatible JVM.
+
+## Significance of the `main` Method in Java
+
+The `main` method serves as the entry point for a Java application. Its signature is:
+
+```java
+public static void main(String[] args)
+```
+
 1.	What is Java? Explain its features.
 Java is a high-level, object-oriented programming language developed by Sun Microsystems (now Oracle) in 1995.
 Key features:
