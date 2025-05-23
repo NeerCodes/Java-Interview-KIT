@@ -1,10 +1,7 @@
 # Java-Interview-KIT
 A comprehensive Java quick revision doc.
 
-# Java Programming Overview
-
 ## What is Java?
-
 Java is a high-level, object-oriented programming language developed by Sun Microsystems (now Oracle) in 1995. It is widely used for its portability, robustness, and versatility across various platforms.
 
 ### Key Features of Java
