@@ -37,36 +37,13 @@ The `main` method serves as the entry point for a Java application. Its signatur
 public static void main(String[] args)
 ```
 
-1.	What is Java? Explain its features.
-Java is a high-level, object-oriented programming language developed by Sun Microsystems (now Oracle) in 1995.
-Key features:
-•	Platform Independent: Write Once, Run Anywhere (WORA).
-•	Object-Oriented: Follows OOP principles like encapsulation and inheritance.
-•	Robust: Strong memory management and exception handling.
-•	Multithreaded: Supports concurrent execution of threads.
-•	Secure: No explicit pointers and runs in a virtual machine.
-2.	What are the main principles of Object-Oriented Programming (OOP)?
-1.	Encapsulation: Wrapping data and methods in a single unit (class).
-2.	Abstraction: Hiding implementation details and showing only the functionality.
-3.	Inheritance: Allowing a class to inherit properties and methods from another class.
-4.	Polymorphism: Using a single interface to represent different forms (overloading and overriding).
-3.	Differentiate between JDK, JRE, and JVM.
-•	JDK (Java Development Kit): Provides tools for development (compiler, debugger).
-•	JRE (Java Runtime Environment): Includes libraries and JVM for running Java applications.
-•	JVM (Java Virtual Machine): Converts bytecode into machine code and executes it.
-4.	Explain the concept of platform independence in Java.
-Java programs are compiled into bytecode, which is platform-independent. Bytecode is executed by the JVM, which is platform-specific, ensuring the same Java program runs on any OS with a compatible JVM.
-5.	What is the significance of the main method in Java?
-The main method is the entry point of a Java application. Its signature is:
-java CopyEdit
-public static void main(String[] args)
+- **public**: Accessible globally.
+- **static**: Allows the JVM to call it without object instantiation.
+- **void**: Returns no value.
+- **String[] args**: Accepts command-line arguments.
 
-•	public: Accessible globally.
-•	static: Allows the JVM to call it without object instantiation.
-•	void: Returns no value.
-•	String[] args: Accepts command-line arguments.
-6.	How does Java achieve memory management?
-Java uses automatic garbage collection to manage memory. Objects are allocated in the heap memory, and when they are no longer referenced, the garbage collector deallocates them.
+##	How does Java achieve memory management?
+- Java uses automatic garbage collection to manage memory. Objects are allocated in the heap memory, and when they are no longer referenced, the garbage collector deallocates them.
  
 7.	What are constructors in Java? How are they different from methods?
 •	Constructors: Special methods to initialize objects.
