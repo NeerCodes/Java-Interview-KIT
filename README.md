@@ -92,44 +92,45 @@ Polymorphism allows methods to perform different tasks based on the object. Type
     - Abstract class can have both abstract and concrete methods; an interface has abstract methods by default (Java 7 and below).
     - A class extends one abstract class but can implement multiple interfaces.
 
-12.	Describe the access modifiers in Java.
-•	Public: Accessible everywhere.
-•	Protected: Accessible within the same package and subclasses.
-•	Default: Accessible within the same package only.
-•	Private: Accessible within the same class only.
+###	Describe the access modifiers in Java.
+  -	**Public**: Accessible everywhere.
+  - **Protected**: Accessible within the same package and subclasses.
+  -	**Default**: Accessible within the same package only.
+  -	**Private**: Accessible within the same class only.
 
-13.	What is encapsulation? How is it implemented in Java?
+###	What is encapsulation? How is it implemented in Java?
 Encapsulation is bundling data (variables) and methods into a single unit (class). It's implemented using:
-1.	Private access modifiers for fields.
-2.	Public getter and setter methods for access.
+  - Private access modifiers for fields.
+  - Public getter and setter methods for access.
 
-14.	Explain the concept of packages in Java.
+###	Explain the concept of packages in Java.
 Packages are namespaces used to group related classes and interfaces. They help avoid name conflicts and improve organization.
 
-15.	What are static variables and methods? Provide examples.
-•	Static Variable: Belongs to the class, shared by all objects.
-•	Static Method: Can be called without creating an object of the class.
-java CopyEdit
+###	What are static variables and methods? Provide examples.
+  - **Static Variable**: Belongs to the class, shared by all objects.
+  - **Static Method**: Can be called without creating an object of the class.
+```java
 class Example {
 static int count = 0; // Static variable static void display() { // Static method
 System.out.println("Count: " + count);
 }
-•	
 }
-16.	Discuss the lifecycle of a thread in Java.
-1.	New: Thread is created.
-2.	Runnable: Thread is ready to run.
-3.	Running: Thread is executing.
-4.	Blocked/Waiting: Thread is waiting for a resource.
-5.	Terminated: Thread execution is complete.
+```
+
+###	Discuss the lifecycle of a thread in Java.
+  - New: Thread is created.
+  -	Runnable: Thread is ready to run.
+  -	Running: Thread is executing.
+  -	Blocked/Waiting: Thread is waiting for a resource.
+  -	Terminated: Thread execution is complete.
  
-17.	What is exception handling? How is it implemented in Java?
+###	What is exception handling? How is it implemented in Java?
 Exception handling manages runtime errors using try, catch, throw, throws, and
 finally.
 
-18.	Differentiate between throw and throws keywords.
-•	throw: Used to explicitly throw an exception.
-•	throws: Declares exceptions a method might throw.
+###	Differentiate between throw and throws keywords.
+  - **throw**: Used to explicitly throw an exception.
+  - **throws**: Declares exceptions a method might throw.
 
 19.	What are checked and unchecked exceptions?
 •	Checked: Checked at compile-time (e.g., IOException).
