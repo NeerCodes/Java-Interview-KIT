@@ -42,10 +42,10 @@ public static void main(String[] args)
 - **void**: Returns no value.
 - **String[] args**: Accepts command-line arguments.
 
-####	How does Java achieve memory management?
+###	How does Java achieve memory management?
 Java uses automatic garbage collection to manage memory. Objects are allocated in the heap memory, and when they are no longer referenced, the garbage collector deallocates them.
  
-7.	What are constructors in Java? How are they different from methods?
+###	What are constructors in Java? How are they different from methods?
 •	Constructors: Special methods to initialize objects.
 •	Name matches the class.
 •	No return type.
