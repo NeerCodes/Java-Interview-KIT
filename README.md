@@ -189,20 +189,20 @@ try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
 }
 ```
 
-33.	What is the difference between final, finally, and finalize()?
-•	final: Prevents modification of variables, methods, or classes.
-•	finally: Ensures execution of code after a try-catch.
-•	finalize(): Called by the garbage collector before destroying an object.
+###	What is the difference between final, finally, and finalize()?
+-	**final**: Prevents modification of variables, methods, or classes.
+-	**finally**: Ensures execution of code after a try-catch.
+-	**finalize()**: Called by the garbage collector before destroying an object.
 
-34.	How does the volatile keyword affect thread behavior?
+###	How does the volatile keyword affect thread behavior?
 Ensures visibility of changes to a variable across threads, preventing caching.
  
-35.	What are design patterns?
+###	What are design patterns?
 Design patterns are reusable solutions to common software design problems. Examples: Singleton, Factory, Observer.
 
-36.	Explain the Singleton design pattern.
+###	Explain the Singleton design pattern.
 Restricts a class to one instance and provides a global access point to it.
-java CopyEdit
+```java
 class Singleton {
 private static Singleton instance; private Singleton() { }
 public static Singleton getInstance() { if (instance == null) {
@@ -211,106 +211,144 @@ instance = new Singleton();
 return instance;
 }
 }
+```
 
-37.	What is JDBC? How is it used?
+###	What is JDBC? How is it used?
 JDBC (Java Database Connectivity) is an API for connecting to databases. Steps:
-1.	Load driver.
-2.	Establish connection.
-3.	Execute SQL queries.
-4.	Close connection.
+-	Load driver.
+-	Establish connection.
+-	Execute SQL queries.
+-	Close connection.
 
-38.	Discuss the differences between Statement and
-PreparedStatement.
-•	Statement: Used for static queries.
-•	PreparedStatement: Precompiled and supports dynamic queries.
+###	Discuss the differences between Statement and PreparedStatement.
+-	**Statement**: Used for static queries.
+-	**PreparedStatement**: Precompiled and supports dynamic queries.
 
-39.	What is the purpose of the transient keyword?
+###	What is the purpose of the transient keyword?
 Excludes fields from serialization.
 
-40.	Explain serialization and deserialization.
-•	Serialization: Converts an object to a byte stream.
-•	Deserialization: Converts a byte stream back to an object.
+###	Explain serialization and deserialization.
+-	**Serialization**: Converts an object to a byte stream.
+-	**Deserialization**: Converts a byte stream back to an object.
 
-41.	What are inner classes?
+###	What are inner classes?
 Classes defined within another class. Types: static, non-static, local, and anonymous.
  
-42.	Describe the use of the synchronized keyword.
+###	Describe the use of the synchronized keyword.
 Locks a block/method to allow only one thread access at a time.
 
-43.	What is the difference between String, StringBuilder, and
-StringBuffer?
-•	String: Immutable.
-•	StringBuilder: Mutable, non-thread-safe.
-•	StringBuffer: Mutable, thread-safe.
+###	What is the difference between String, StringBuilder, and StringBuffer?
+-	**String**: Immutable.
+-	**StringBuilder**: Mutable, non-thread-safe.
+-	**StringBuffer**: Mutable, thread-safe.
 
-44.	Explain the concept of immutability in Java.
+###	Explain the concept of immutability in Java.
 Immutable objects cannot be modified after creation, e.g., String.
 
-45.	How does Java handle memory leaks?
+###	How does Java handle memory leaks?
 Java uses garbage collection but memory leaks can occur if references to unused objects are maintained.
 
-46.	What are functional interfaces?
+###	What are functional interfaces?
 Interfaces with a single abstract method, e.g., Runnable.
 
-47.	Discuss the role of the default keyword in interfaces.
+###	Discuss the role of the default keyword in interfaces.
 Allows adding methods to interfaces without breaking existing implementations.
 
-48.	What is the enum type in Java? Used to define a set of named constants. Example:
-java CopyEdit
+###	What is the enum type in Java? Used to define a set of named constants. Example:
+```java
 enum Day { MONDAY, TUESDAY }
+```
 
-49.	Explain the concept of reflection in Java.
+###	Explain the concept of reflection in Java.
 Allows inspection and modification of classes, methods, and fields at runtime.
 
-50.	What are modules in Java?
+###	What are modules in Java?
 Introduced in Java 9, modules allow better packaging, encapsulation, and dependency management.
  
-CODING QUESTIONS
+## CODING QUESTIONS
 
-1.	Two Sum: Given an array of integers, find two numbers that add up to a specific target.
-2.	Reverse a String: Write a function to reverse a string without using built-in functions.
-3.	Palindrome Check: Determine if a given string is a palindrome.
-4.	Merge Two Sorted Lists: Merge two sorted linked lists and return it as a new sorted list.
-5.	Longest Substring Without Repeating Characters: Find the length of the longest substring without repeating characters.
-6.	Valid Parentheses: Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-7.	Search in Rotated Sorted Array: Search for a target value in a rotated sorted array.
-8.	Container With Most Water: Given n non-negative integers, find two lines that together with the x-axis form a container, such that the container contains the most water.
-9.	3Sum: Find all unique triplets in the array which gives the sum of zero.
-10.	Remove Nth Node From End of List: Remove the n-th node from the end of a linked list and return its head.
-11.	Maximum Subarray: Find the contiguous subarray with the largest sum.
-12.	Climbing Stairs: You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-13.	Set Matrix Zeroes: Given a m x n matrix, if an element is 0, set its entire row and column to 0.
-14.	Group Anagrams: Given an array of strings, group anagrams together.
-15.	Merge Intervals: Given a collection of intervals, merge all overlapping intervals.
-16.	Linked List Cycle: Given a linked list, determine if it has a cycle in it.
-17.	Implement Stack using Queues: Implement a last-in-first-out (LIFO) stack using only two queues.
-18.	Minimum Window Substring: Given two strings s and t, find the minimum window in s which will contain all the characters in t.
-19.	Word Search: Given a 2D board and a word, find if the word exists in the grid.
-20.	Longest Increasing Subsequence: Find the length of the longest increasing subsequence in an array.
-21.	Decode Ways: A message containing letters from A-Z is encoded to numbers using 'A' -> 1, 'B' -> 2, ..., 'Z' -> 26. Given an encoded message, determine the total number of ways to decode it.
-22.	Coin Change: Given coins of different denominations and a total amount of money, find the fewest number of coins needed to make up that amount.
-23.	House Robber: Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
+1.	**Two Sum**: Given an array of integers, find two numbers that add up to a specific target.
+
+2.	**Reverse a String**: Write a function to reverse a string without using built-in functions.
+
+3.	**Palindrome Check**: Determine if a given string is a palindrome.
+
+4.	**Merge Two Sorted Lists**: Merge two sorted linked lists and return it as a new sorted list.
+
+5.	**Longest Substring Without Repeating Characters**: Find the length of the longest substring without repeating characters.
+
+6.	**Valid Parentheses**: Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+7.	**Search in Rotated Sorted Array**: Search for a target value in a rotated sorted array.
+
+8.	**Container With Most Water**: Given n non-negative integers, find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+9.	**3Sum**: Find all unique triplets in the array which gives the sum of zero.
+
+
+10.	**Remove Nth Node From End of List**: Remove the n-th node from the end of a linked list and return its head.
+
+11.	**Maximum Subarray**: Find the contiguous subarray with the largest sum.
+
+12.	**Climbing Stairs**: You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+13.	**Set Matrix Zeroes**: Given a m x n matrix, if an element is 0, set its entire row and column to 0.
+
+14.	**Group Anagrams**: Given an array of strings, group anagrams together.
+
+15.	**Merge Intervals**: Given a collection of intervals, merge all overlapping intervals.
+
+16.	**Linked List Cycle**: Given a linked list, determine if it has a cycle in it.
+
+17.	**Implement Stack using Queues**: Implement a last-in-first-out (LIFO) stack using only two queues.
+
+18.	**Minimum Window Substring**: Given two strings s and t, find the minimum window in s which will contain all the characters in t.
+
+19.	**Word Search**: Given a 2D board and a word, find if the word exists in the grid.
+
+20.	**Longest Increasing Subsequence**: Find the length of the longest increasing subsequence in an array.
+
+21.	**Decode Ways**: A message containing letters from A-Z is encoded to numbers using 'A' -> 1, 'B' -> 2, ..., 'Z' -> 26. Given an encoded message, determine the total number of ways to decode it.
+
+22.	**Coin Change**: Given coins of different denominations and a total amount of money, find the fewest number of coins needed to make up that amount.
+
+23.	**House Robber**: Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
  
-24.	Binary Tree Inorder Traversal: Given a binary tree, return the inorder traversal of its nodes' values.
-25.	Validate Binary Search Tree: Determine if a given binary tree is a valid binary search tree.
-26.	Lowest Common Ancestor of a Binary Tree: Given a binary tree, find the lowest common ancestor of two given nodes in the tree.
-27.	Serialize and Deserialize Binary Tree: Design an algorithm to serialize and deserialize a binary tree.
-28.	Kth Smallest Element in a BST: Find the kth smallest element in a binary search tree.
-29.	Number of Islands: Given a 2D grid of '1's (land) and '0's (water), count the number of islands.
-30.	Course Schedule: There are a total of numCourses you have to take, labeled from 0 to numCourses-1. Some courses may have prerequisites. Determine if you can finish all courses.
-31.	Implement Trie (Prefix Tree): Implement a trie with insert, search, and startsWith methods.
-32.	Add and Search Word - Data structure design: Design a data structure that supports the addition of words and the search for a word in a dictionary.
-33.	Word Ladder: Given two words (beginWord and endWord), and a dictionary's word list, find the length of the shortest transformation sequence from beginWord to endWord.
-34.	Find Median from Data Stream: The median is the middle value in an ordered integer list. Write a program that finds the median of input data stream.
-35.	Sliding Window Maximum: Given an array and an integer k, find the maximum for each sliding window of size k.
-36.	Longest Consecutive Sequence: Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-37.	Graph Valid Tree: Given n nodes labeled from 0 to n-1 and a list of undirected edges, determine if these edges form a valid tree.
-38.	Number of Connected Components in an Undirected Graph
+24.	**Binary Tree Inorder Traversal**: Given a binary tree, return the inorder traversal of its nodes' values.
+
+25.	**Validate Binary Search Tree**: Determine if a given binary tree is a valid binary search tree.
+
+26.	**Lowest Common Ancestor of a Binary Tree**: Given a binary tree, find the lowest common ancestor of two given nodes in the tree.
+
+27.	**Serialize and Deserialize Binary Tree**: Design an algorithm to serialize and deserialize a binary tree.
+
+28.	**Kth Smallest Element in a BST**: Find the kth smallest element in a binary search tree.
+
+29.	**Number of Islands**: Given a 2D grid of '1's (land) and '0's (water), count the number of islands.
+
+30.	**Course Schedule**: There are a total of numCourses you have to take, labeled from 0 to numCourses-1. Some courses may have prerequisites. Determine if you can finish all courses.
+
+31.	**Implement Trie (Prefix Tree)**: Implement a trie with insert, search, and startsWith methods.
+
+32.	**Add and Search Word - Data structure design**: Design a data structure that supports the addition of words and the search for a word in a dictionary.
+
+33.	**Word Ladder**: Given two words (beginWord and endWord), and a dictionary's word list, find the length of the shortest transformation sequence from beginWord to endWord.
+
+34.	**Find Median from Data Stream**: The median is the middle value in an ordered integer list. Write a program that finds the median of input data stream.
+
+35.	**Sliding Window Maximum**: Given an array and an integer k, find the maximum for each sliding window of size k.
+
+36.	**Longest Consecutive Sequence**: Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+37.	**Graph Valid Tree**: Given n nodes labeled from 0 to n-1 and a list of undirected edges, determine if these edges form a valid tree.
+
+38.	**Number of Connected Components in an Undirected Graph**
  
 
-PROGRAMS
+## PROGRAMS
 
-1.	Two Sum
+### 1.	Two Sum
+```java
 public int[] twoSum(int[] nums, int target) { Map<Integer, Integer> map = new HashMap<>(); for (int i = 0; i < nums.length; i++) {
 int complement = target - nums[i]; if (map.containsKey(complement)) {
 return new int[] { map.get(complement), i };
@@ -319,6 +357,7 @@ map.put(nums[i], i);
 }
 return new int[] {};
 }
+```
 
 2.	Reverse a String
 public String reverseString(String s) {
