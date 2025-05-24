@@ -359,19 +359,24 @@ return new int[] {};
 }
 ```
 
-2.	Reverse a String
+### 2.	Reverse a String
+```java
 public String reverseString(String s) {
 return new StringBuilder(s).reverse().toString();
 }
+```
 
-3.	Palindrome Check
+### 3.	Palindrome Check
+```java
 public boolean isPalindrome(String s) { int left = 0, right = s.length() - 1; while (left < right) {
 if (s.charAt(left++) != s.charAt(right--)) return false;
 }
 return true;
 }
+```
 
-4.	Merge Two Sorted Lists
+### 4.	Merge Two Sorted Lists
+```java
 public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) return l2;
 if (l2 == null) return l1; if (l1.val < l2.val) {
 l1.next = mergeTwoLists(l1.next, l2); return l1;
@@ -379,8 +384,10 @@ l1.next = mergeTwoLists(l1.next, l2); return l1;
 l2.next = mergeTwoLists(l1, l2.next); return l2;
 }
 }
+```
 
-5.	Longest Substring Without Repeating Characters
+### 5.	Longest Substring Without Repeating Characters
+```java
 public int lengthOfLongestSubstring(String s) { Set<Character> set = new HashSet<>();
 int left = 0, maxLen = 0;
 for (int right = 0; right < s.length(); right++) { while (set.contains(s.charAt(right))) {
@@ -392,8 +399,10 @@ maxLen = Math.max(maxLen, right - left + 1);
 }
 return maxLen;
 }
+```
 
-6.	Valid Parentheses
+### 6.	Valid Parentheses
+```java
 public boolean isValid(String s) { Stack<Character> stack = new Stack<>(); for (char c : s.toCharArray()) {
 if (c == '(' || c == '{' || c == '[') { stack.push(c);
 } else if (!stack.isEmpty() &&
@@ -406,8 +415,10 @@ return false;
 }
 return stack.isEmpty();
 }
+```
 
-7.	Search in Rotated Sorted Array
+### 7.	Search in Rotated Sorted Array
+```java
 public int search(int[] nums, int target) { int left = 0, right = nums.length - 1; while (left <= right) {
 int mid = (left + right) / 2;
 if (nums[mid] == target) return mid; if (nums[left] <= nums[mid]) {
@@ -422,8 +433,10 @@ else right = mid - 1;
 }
 return -1;
 }
+```
 
-8.	Container With Most Water
+### 8.	Container With Most Water
+```java
 public int maxArea(int[] height) {
 int left = 0, right = height.length - 1, max = 0; while (left < right) {
 max = Math.max(max, Math.min(height[left], height[right]) * (right
@@ -432,8 +445,10 @@ if (height[left] < height[right]) left++; else right--;
 }
 return max;
 }
+```
  
-9.	3Sum
+### 9.	3Sum
+```java
 public List<List<Integer>> threeSum(int[] nums) { Arrays.sort(nums);
 List<List<Integer>> result = new ArrayList<>(); for (int i = 0; i < nums.length - 2; i++) {
 if (i > 0 && nums[i] == nums[i - 1]) continue; int left = i + 1, right = nums.length - 1; while (left < right) {
@@ -457,8 +472,10 @@ while (left < right && nums[right] == nums[right + 1])
 }
 return result;
 }
+```
 
-10.	Remove Nth Node From End of List
+### 10.	Remove Nth Node From End of List
+```java
 public ListNode removeNthFromEnd(ListNode head, int n) { ListNode dummy = new ListNode(0);
 dummy.next = head;
 ListNode slow = dummy, fast = dummy;
@@ -467,17 +484,21 @@ slow = slow.next; fast = fast.next;
 }
 slow.next = slow.next.next; return dummy.next;
 }
+```
 
 
-11.	Maximum Subarray
+### 11.	Maximum Subarray
+```java
 public int maxSubArray(int[] nums) {
 int max = nums[0], currentSum = nums[0]; for (int i = 1; i < nums.length; i++) {
 currentSum = Math.max(nums[i], currentSum + nums[i]); max = Math.max(max, currentSum);
 }
 return max;
 }
+```
 
-12.	Climbing Stairs
+### 12.	Climbing Stairs
+```java
 public int climbStairs(int n) { if (n <= 2) return n;
 int first = 1, second = 2;
 for (int i = 3; i <= n; i++) { int third = first + second;
@@ -486,8 +507,10 @@ first = second; second = third;
 }
 return second;
 }
+```
 
-13.	Set Matrix Zeroes
+### 13.	Set Matrix Zeroes
+```java
 public void setZeroes(int[][] matrix) { boolean firstRow = false, firstCol = false; for (int i = 0; i < matrix.length; i++) {
 for (int j = 0; j < matrix[0].length; j++) { if (matrix[i][j] == 0) {
 if (i == 0) firstRow = true; if (j == 0) firstCol = true; matrix[i][0] = 0;
@@ -503,8 +526,10 @@ if (matrix[i][0] == 0 || matrix[0][j] == 0) matrix[i][j] = 0;
 if (firstRow) Arrays.fill(matrix[0], 0);
 if (firstCol) for (int i = 0; i < matrix.length; i++) matrix[i][0] = 0;
 }
+```
 
-14.	Group Anagrams
+### 14.	Group Anagrams
+```java
 public List<List<String>> groupAnagrams(String[] strs) { Map<String, List<String>> map = new HashMap<>();
 for (String s : strs) {
 char[] chars = s.toCharArray(); Arrays.sort(chars);
@@ -512,8 +537,10 @@ String key = new String(chars); map.putIfAbsent(key, new ArrayList<>()); map.get
 }
 return new ArrayList<>(map.values());
 }
+```
 
-15.	Merge Intervals
+### 15.	Merge Intervals
+```java
 public int[][] merge(int[][] intervals) {
 Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0])); List<int[]> merged = new ArrayList<>();
 for (int[] interval : intervals) {
@@ -525,8 +552,10 @@ merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], in
 }
 return merged.toArray(new int[merged.size()][]);
 }
+```
  
-16.	Linked List Cycle
+### 16.	Linked List Cycle
+```java
 public boolean hasCycle(ListNode head) {
 if (head == null || head.next == null) return false; ListNode slow = head, fast = head.next;
 while (slow != fast) {
@@ -535,28 +564,36 @@ fast = fast.next.next;
 }
 return true;
 }
+```
 
-17.	Implement Stack using Queues
+### 17.	Implement Stack using Queues
+```java
 class MyStack {
 Queue<Integer> queue = new LinkedList<>();
 
-public void push(int x) { queue.add(x);
-for (int i = 1; i < queue.size(); i++) { queue.add(queue.poll());
+public void push(int x) {
+queue.add(x);
+for (int i = 1; i < queue.size(); i++) {
+queue.add(queue.poll());
 }
 }
 
-public int pop() { return queue.poll();
+public int pop() {
+return queue.poll();
 }
 
-public int top() { return queue.peek();
+public int top() {
+return queue.peek();
 }
 
-public boolean empty() { return queue.isEmpty();
+public boolean empty() {
+return queue.isEmpty();
 }
 }
+```
 
-18.	Minimum Window Substring
-
+### 18.	Minimum Window Substring
+```java
 public String minWindow(String s, String t) { if (s.length() < t.length()) return "";
 Map<Character, Integer> map = new HashMap<>();
 for (char c : t.toCharArray()) map.put(c, map.getOrDefault(c, 0) + 1); int left = 0, count = 0, minLen = Integer.MAX_VALUE, start = 0;
@@ -575,9 +612,10 @@ if (map.get(lc) > 0) count--;
 }
 return minLen == Integer.MAX_VALUE ? "" : s.substring(start, start + minLen);
 }
+```
 
-19.	Word Search
-
+### 19.	Word Search
+```java
 public boolean exist(char[][] board, String word) { for (int i = 0; i < board.length; i++) {
 for (int j = 0; j < board[0].length; j++) {
 if (dfs(board, word, i, j, 0)) return true;
@@ -592,9 +630,10 @@ char temp = board[i][j]; board[i][j] = '#';
 boolean found = dfs(board, word, i + 1, j, index + 1) || dfs(board, word, i - 1, j, index + 1) || dfs(board, word, i, j + 1, index + 1) || dfs(board, word, i, j - 1, index + 1);
 board[i][j] = temp; return found;
 }
+```
 
-29.	Number of Islands
-
+### 29.	Number of Islands
+```java
 public int numIslands(char[][] grid) { int count = 0;
 for (int i = 0; i < grid.length; i++) {
 for (int j = 0; j < grid[0].length; j++) { if (grid[i][j] == '1') {
@@ -614,9 +653,10 @@ dfs(grid, i, j + 1);
 dfs(grid, i, j - 1);
  
 }
+```
 
-30.	Course Schedule
-
+### 30.	Course Schedule
+```java
 public boolean canFinish(int numCourses, int[][] prerequisites) { List<List<Integer>> graph = new ArrayList<>();
 for (int i = 0; i < numCourses; i++) graph.add(new ArrayList<>()); int[] inDegree = new int[numCourses];
 for (int[] prereq : prerequisites) { graph.get(prereq[1]).add(prereq[0]); inDegree[prereq[0]]++;
@@ -631,9 +671,10 @@ if (--inDegree[next] == 0) queue.add(next);
 }
 return count == numCourses;
 }
+```
 
-31.	Implement Trie (Prefix Tree)
-
+### 31.	Implement Trie (Prefix Tree)
+```java
 class Trie {
 private TrieNode root;
 
@@ -686,9 +727,10 @@ public void setEnd() { isEnd = true;
 public boolean isEnd() { return isEnd;
 }
 }
+```
 
-32.	Add and Search Word - Data Structure Design
-
+### 32.	Add and Search Word - Data Structure Design
+```java
 class WordDictionary { private TrieNode root;
 
 public WordDictionary() { root = new TrieNode();
@@ -717,9 +759,10 @@ return node.containsKey(c) && search(word, index + 1, node.get(c));
 }
 }
 }
+```
 
-33.	Word Ladder
-
+### 33.	Word Ladder
+```java
 public int ladderLength(String beginWord, String endWord, List<String> wordList) {
 Set<String> wordSet = new HashSet<>(wordList); if (!wordSet.contains(endWord)) return 0; Queue<String> queue = new LinkedList<>(); queue.add(beginWord);
 int steps = 1;
@@ -738,12 +781,14 @@ steps++;
 }
 return 0;
 }
+```
 
-34.	Find Median from Data Stream
-
+### 34.	Find Median from Data Stream
+```java
 class MedianFinder {
 private PriorityQueue<Integer> small = new PriorityQueue<>(Collections.reverseOrder());
 private PriorityQueue<Integer> large = new PriorityQueue<>();
 
 public void addNum(int num) { small.add(num); large.add(small.poll());
 if (small.size() < large.size()) small.add(large.poll());
+```
